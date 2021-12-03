@@ -1,6 +1,6 @@
 ﻿namespace Calendrier
 {
-    partial class Form1
+    partial class CalendarView
     {
         /// <summary>
         /// Variable nécessaire au concepteur.
