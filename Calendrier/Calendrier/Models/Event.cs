@@ -17,9 +17,9 @@ namespace Calendrier
             _name = name;
             _releasEventDate = releasEventDate;
         }
-        public void Addbroadcast() 
+        public void Addbroadcast(Broadcast broadcast) 
         {
-            _boradcast.Add(Broadcast);
+            _boradcast.Add(broadcast);
         }
     }
 }
