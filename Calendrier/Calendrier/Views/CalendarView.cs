@@ -30,7 +30,7 @@ namespace Calendrier
 
             DateTime startofthemounth = new DateTime(now.Year, now.Month, 1);
             int days = DateTime.DaysInMonth(now.Year,now.Month);
-            int daysoftheweek = Convert.ToInt32(startofthemounth.DayOfWeek.ToString("d")) + 1;
+            int daysoftheweek = Convert.ToInt32(startofthemounth.DayOfWeek.ToString("d")) + 2;
 
             for (int i=1; i < daysoftheweek; i++){
                 UserControlBlank ucblank = new UserControlBlank();
@@ -51,6 +51,9 @@ namespace Calendrier
 
         }
 
-      
+        private void btnReturn_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

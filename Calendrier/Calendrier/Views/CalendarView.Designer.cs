@@ -38,6 +38,7 @@
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
+            this.btnReturn = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // DayContainer
@@ -46,7 +47,6 @@
             this.DayContainer.Name = "DayContainer";
             this.DayContainer.Size = new System.Drawing.Size(1079, 568);
             this.DayContainer.TabIndex = 0;
-           
             // 
             // BtnBack
             // 
@@ -138,11 +138,22 @@
             this.label8.TabIndex = 9;
             this.label8.Text = "Dimanche";
             // 
-            // Form1
+            // btnReturn
+            // 
+            this.btnReturn.Location = new System.Drawing.Point(12, 12);
+            this.btnReturn.Name = "btnReturn";
+            this.btnReturn.Size = new System.Drawing.Size(22, 29);
+            this.btnReturn.TabIndex = 10;
+            this.btnReturn.Text = "<";
+            this.btnReturn.UseVisualStyleBackColor = true;
+            this.btnReturn.Click += new System.EventHandler(this.btnReturn_Click);
+            // 
+            // CalendarView
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1175, 762);
+            this.Controls.Add(this.btnReturn);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label6);
@@ -153,7 +164,7 @@
             this.Controls.Add(this.BtnNext);
             this.Controls.Add(this.BtnBack);
             this.Controls.Add(this.DayContainer);
-            this.Name = "Form1";
+            this.Name = "CalendarView";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);
@@ -173,6 +184,7 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Button btnReturn;
     }
 }
 
