@@ -68,6 +68,18 @@
     <Compile Include="Views\EventView.Designer.cs">
       <DependentUpon>EventView.cs</DependentUpon>
     </Compile>
+    <Compile Include="Views\GameList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\GameList.Designer.cs">
+      <DependentUpon>GameList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Home.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Home.Designer.cs">
+      <DependentUpon>Home.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Views\CalendarView.resx">
       <DependentUpon>CalendarView.cs</DependentUpon>
     </EmbeddedResource>
@@ -83,6 +95,12 @@
     </Compile>
     <EmbeddedResource Include="Views\EventView.resx">
       <DependentUpon>EventView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\GameList.resx">
+      <DependentUpon>GameList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Home.resx">
+      <DependentUpon>Home.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
