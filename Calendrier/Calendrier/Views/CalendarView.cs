@@ -1,4 +1,4 @@
-﻿using Calendrier.Views;
+﻿using Calendrier;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;

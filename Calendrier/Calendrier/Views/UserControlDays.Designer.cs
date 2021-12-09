@@ -1,5 +1,5 @@
 ﻿
-namespace Calendrier.Views
+namespace Calendrier
 {
     partial class UserControlDays
     {

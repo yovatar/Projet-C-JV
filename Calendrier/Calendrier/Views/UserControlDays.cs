@@ -7,8 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
-namespace Calendrier.Views
+namespace Calendrier
 {
     public partial class UserControlDays : UserControl
     {
