@@ -2,20 +2,112 @@
 	{
 		"id": 1,
 		"name": "Ubisoft"
-	},{
+	},
+	{
 		"id": 2,
 		"name": "Electronics Arts"
-	},{
+	},
+	{
 		"id": 3,
 		"name": "Valve Software"
-	},{
+	},
+	{
 		"id": 4,
-		"name": "Activision"
-	},{
+		"name": "Activision/Blizzard"
+	},
+	{
 		"id": 5,
 		"name": "Capcom"
-	},{
+	},
+	{
 		"id": 6,
 		"name": "Konami"
+	},
+	{
+		"id": 7,
+		"name": "Epic Games"
+	},
+	{
+		"id": 8,
+		"name": "Electronic Arts"
+	},
+	{
+		"id": 9,
+		"name": "Nintendo"
+	},
+	{
+		"id": 10,
+		"name": "Square Enix"
+	},
+	{
+		"id": 11,
+		"name": "CD Project"
+	},
+	{
+		"id": 12,
+		"name": "Boungie inc."
+	},
+	{
+		"id": 13,
+		"name": "Innersloth"
+	},
+	{
+		"id": 14,
+		"name": "FoamPunch"
+	},
+	{
+		"id": 15,
+		"name": "Annapurna Interactive"
+	},
+	{
+		"id": 16,
+		"name": "Mundfish"
+	},
+	{
+		"id": 17,
+		"name": "Amazon Game Studios"
+	},
+	{
+		"id": 18,
+		"name": "Stray Bombay"
+	},
+	{
+		"id": 19,
+		"name": "Stray Bombay"
+	},
+	{
+		"id": 20,
+		"name": "Devolver Digital"
+	},
+	{
+		"id": 21,
+		"name": "FYQD Studios"
+	},
+	{
+		"id": 22,
+		"name": "Endnight Games"
+	},
+	{
+		"id": 23,
+		"name": "Sony Interactive Entertainment"
+	},
+	{
+		"id": 24,
+		"name": "Techland"
+	},
+	{
+		"id": 25,
+		"name": "SNK"
+	},
+	{
+		"id": 26,
+		"name": "THQ"
+	},
+	{
+		"id": 27,
+		"name": "FromSoftware"
 	}
 ]
+
+
+

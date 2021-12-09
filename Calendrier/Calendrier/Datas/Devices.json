@@ -1,21 +1,21 @@
 [
 	{
 		"id": 1,
-		"name": "Ubisoft"
+		"name": "PS4"
 	},{
 		"id": 2,
-		"name": "Electronics Arts"
+		"name": "PS5"
 	},{
 		"id": 3,
-		"name": "Valve Software"
+		"name": "XBOX One"
 	},{
 		"id": 4,
-		"name": "Activision"
+		"name": "XBOX SX"
 	},{
 		"id": 5,
-		"name": "Capcom"
+		"name": "PC"
 	},{
 		"id": 6,
-		"name": "Konami"
+		"name": "Switch"
 	}
 ]

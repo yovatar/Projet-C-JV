@@ -12,7 +12,7 @@ namespace Calendrier
         private DateTime _releasEventDate;
         private List<Broadcast> _boradcast;
 
-        public Event(string name, DateTime releasEventDate) 
+        public Event(string name, DateTime releasEventDate)
         {
             _name = name;
             _releasEventDate = releasEventDate;
