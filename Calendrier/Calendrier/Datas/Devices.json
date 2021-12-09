@@ -1,0 +1,21 @@
+[
+	{
+		"id": 1,
+		"name": "Ubisoft"
+	},{
+		"id": 2,
+		"name": "Electronics Arts"
+	},{
+		"id": 3,
+		"name": "Valve Software"
+	},{
+		"id": 4,
+		"name": "Activision"
+	},{
+		"id": 5,
+		"name": "Capcom"
+	},{
+		"id": 6,
+		"name": "Konami"
+	}
+]

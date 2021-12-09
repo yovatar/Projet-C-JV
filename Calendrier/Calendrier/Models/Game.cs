@@ -26,6 +26,12 @@ namespace Calendrier
         {
             _editor.Add(editor);
         }
+
+        public static List<Game> getAll()
+        {
+            List<Game> games = new List<Game>();
+            return games;
+        }
     }
 
 }
