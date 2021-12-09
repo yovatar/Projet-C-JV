@@ -1,21 +1,194 @@
 [
 	{
 		"id": 1,
-		"name": "Ubisoft"
-	},{
+		"name": "Among Us (Version Physique)",
+		"releaseDate": "2021-12-14",
+		"devices": [ 1, 2, 3, 4, 5, 6 ],
+		"editors": [ 13 ]
+	},
+	{
 		"id": 2,
-		"name": "Electronics Arts"
-	},{
+		"name": "Shredders",
+		"releaseDate": "2021-12",
+		"devices": [ 3, 4, 5 ],
+		"editors": [ 14 ]
+
+	},
+	{
 		"id": 3,
-		"name": "Valve Software"
-	},{
+		"name": "Solar Ash",
+		"releaseDate": "2021-12",
+		"devices": [ 2 ],
+		"editors": [ 15 ]
+
+	},
+	{
 		"id": 4,
-		"name": "Activision"
-	},{
+		"name": "Atomic Heart",
+		"releaseDate": "2021",
+		"devices": [ 1, 2, 3, 4, 5 ],
+		"editors": [ 16 ]
+	},
+	{
 		"id": 5,
-		"name": "Capcom"
-	},{
+		"name": "Lost Ark",
+		"releaseDate": "2021",
+		"devices": [ 5 ],
+		"editors": [ 17 ]
+	},
+	{
 		"id": 6,
-		"name": "Konami"
+		"name": "The Anacrusis",
+		"releaseDate": "2021",
+		"devices": [ 3, 4, 5 ],
+		"editors": [ 18 ]
+	},
+	{
+		"id": 7,
+		"name": "Rocksmith+",
+		"releaseDate": "2021",
+		"devices": [ 1, 2, 3, 4, 5, 6 ],
+		"editors": [ 1 ]
+	},
+	{
+		"id": 8,
+		"name": "Project Zero : La Prêtresse des Eaux Noires",
+		"releaseDate": "2021",
+		"devices": [ 6 ],
+		"editors": [ 9 ]
+	},
+	{
+		"id": 9,
+		"name": "Shadow Warrior 3",
+		"releaseDate": "2021",
+		"devices": [ 1, 3, 5 ],
+		"editors": [ 20 ]
+	},
+	{
+		"id": 10,
+		"name": "Bright Memory : Infinite",
+		"releaseDate": "2021",
+		"devices": [ 1, 2, 3, 4, 5 ],
+		"editors": [ 21 ]
+	},
+	{
+		"id": 11,
+		"name": "Sons of the Forest",
+		"releaseDate": "2021",
+		"devices": [ 5 ],
+		"editors": [ 22 ]
+	},
+	{
+		"id": 12,
+		"name": "God of War",
+		"releaseDate": "2021-1-14",
+		"devices": [ 5 ],
+		"editors": [ 23 ]
+	},
+	{
+		"id": 13,
+		"name": "Pokémon Legends Arceus",
+		"releaseDate": "2021-1-28",
+		"devices": [ 6 ],
+		"editors": [ 9 ]
+	},
+	{
+		"id": 14,
+		"name": "Rainbow Six Extraction",
+		"releaseDate": "2021-1",
+		"devices": [ 5 ],
+		"editors": [ 21 ]
+	},
+	{
+		"id": 15,
+		"name": "Dying Light 2",
+		"releaseDate": "2021-2-4",
+		"devices": [ 2, 4, 5 ],
+		"editors": [ 24 ]
+	},
+	{
+		"id": 16,
+		"name": "King Of Fighters XV",
+		"releaseDate": "2021-2-17",
+		"devices": [ 1, 2 ],
+		"editors": [ 25 ]
+	},
+	{
+		"id": 17,
+		"name": "Horizon Forbidden West",
+		"releaseDate": "2021-2-18",
+		"devices": [ 1, 2 ],
+		"editors": [ 23 ]
+	},
+	{
+		"id": 18,
+		"name": "Saints Row",
+		"releaseDate": "2021-2-22",
+		"devices": [ 1, 2, 3, 4, 5 ],
+		"editors": [ 26 ]
+	},
+	{
+		"id": 19,
+		"name": "Elden Ring",
+		"releaseDate": "2021-2-25",
+		"devices": [ 1, 2, 3, 4, 5 ],
+		"editors": [ 27 ]
+	},
+	{
+		"id": 20,
+		"name": "Gran Turismo 7",
+		"releaseDate": "2021-2-25",
+		"devices": [ 2 ],
+		"editors": [ 23 ]
+	},
+	{
+		"id": 21,
+		"name": "Stray",
+		"releaseDate": "2021-2-25",
+		"devices": [ 1, 2, 5 ],
+		"editors": [ 15 ]
+	},
+	{
+		"id": 22,
+		"name": "Uncharted : Legacy of Thieves Collection",
+		"releaseDate": "2022",
+		"devices": [ 1, 2, 5 ],
+		"editors": [ 23 ]
+	},
+	{
+		"id": 23,
+		"name": "Forspoken",
+		"releaseDate": "2022",
+		"devices": [ 2, 5 ],
+		"editors": [ 10 ]
+	},
+	{
+		"id": 24,
+		"name": "Kirby : Et le monde oublié",
+		"releaseDate": "2022",
+		"devices": [ 6 ],
+		"editors": [ 9 ]
+	},
+	{
+		"id": 25,
+		"name": "Starfield",
+		"releaseDate": "2022-11-11",
+		"devices": [ 6 ],
+		"editors": [ 9 ]
+	},
+	{
+		"id": 26,
+		"name": "Cyberpunk 2077",
+		"releaseDate": "2022",
+		"devices": [ 6 ],
+		"editors": [ 9 ]
+	},
+	{
+		"id": 27,
+		"name": "The Witcher III",
+		"releaseDate": "2022",
+		"devices": [ 6 ],
+		"editors": [ 9 ]
 	}
+
 ]
