@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Calendrier.Views;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -26,7 +27,27 @@ namespace Calendrier
 
             DateTime startofthemounth = new DateTime(now.Year, now.Month, 1);
             int days = DateTime.DaysInMonth(now.Year,now.Month);
-            int daysoftheweek = Convert.ToInt32(startofthemounth.DayOfWeek.ToString("d"));
+            int daysoftheweek = Convert.ToInt32(startofthemounth.DayOfWeek.ToString("d")) + 1;
+
+            for (int i=1; i < daysoftheweek; i++){
+                UserControlBlank ucblank = new UserControlBlank();
+                DayContainer.Controls.Add(ucblank);
+
+            }
+            for (int i = 1; i <= days; i++) {
+                UserControlBlank ucdays = new UserControlDays();
+                ucdays.days();
+            }
+
+
+
+
+
+
+
+
         }
+
+      
     }
 }
