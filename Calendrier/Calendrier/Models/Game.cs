@@ -29,7 +29,7 @@ namespace Calendrier
 
         public static List<Game> getAll()
         {
-            List<Game> games = new List<Game>;
+            List<Game> games = new List<Game>();
             return games;
         }
     }

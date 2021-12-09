@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Calendrier.Views
+namespace Calendrier
 {
     public partial class GameList : Form
     {
@@ -20,6 +20,11 @@ namespace Calendrier.Views
         private void label1_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void btnBack_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }
