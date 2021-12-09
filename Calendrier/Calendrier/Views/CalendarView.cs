@@ -38,8 +38,8 @@ namespace Calendrier
 
             }
             for (int i = 1; i <= days; i++) {
-                UserControlBlank ucdays = new UserControlDays();
-                ucdays.days();
+                UserControlDays ucdays = new UserControlDays();
+                ucdays.days(i);
             }
 
 
