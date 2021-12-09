@@ -1,5 +1,5 @@
 ﻿
-namespace Calendrier.Views
+namespace Calendrier
 {
     partial class Home
     {
@@ -42,6 +42,7 @@ namespace Calendrier.Views
             this.btnEvent.TabIndex = 0;
             this.btnEvent.Text = "Event";
             this.btnEvent.UseVisualStyleBackColor = true;
+            this.btnEvent.Click += new System.EventHandler(this.btnEvent_Click);
             // 
             // btnGame
             // 
@@ -51,6 +52,7 @@ namespace Calendrier.Views
             this.btnGame.TabIndex = 1;
             this.btnGame.Text = "Game";
             this.btnGame.UseVisualStyleBackColor = true;
+            this.btnGame.Click += new System.EventHandler(this.btnGame_Click);
             // 
             // lblGameFinder
             // 

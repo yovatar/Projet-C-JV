@@ -1,5 +1,5 @@
 ﻿
-namespace Calendrier.Views
+namespace Calendrier
 {
     partial class GameList
     {
@@ -49,6 +49,7 @@ namespace Calendrier.Views
             this.btnBack.TabIndex = 0;
             this.btnBack.Text = "<";
             this.btnBack.UseVisualStyleBackColor = true;
+            this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
             // 
             // lstGameList
             // 

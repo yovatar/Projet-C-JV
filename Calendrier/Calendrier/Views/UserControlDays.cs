@@ -7,24 +7,21 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
 namespace Calendrier
 {
-    public partial class GameList : Form
+    public partial class UserControlDays : UserControl
     {
-        public GameList()
+        public UserControlDays()
         {
             InitializeComponent();
         }
 
-        private void label1_Click(object sender, EventArgs e)
+        private void UserControlDays_Load(object sender, EventArgs e)
         {
 
         }
-
-        private void btnBack_Click(object sender, EventArgs e)
-        {
-            this.Close();
+        public void days(int numday) {
+            lbdays.Text = numday+"";
         }
     }
 }

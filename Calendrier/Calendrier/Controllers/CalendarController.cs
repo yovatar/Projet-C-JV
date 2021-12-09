@@ -4,13 +4,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-
 namespace Calendrier.Controllers
 {
     public class CalendarController
     {
-        private List<Game> _gameOnList = new List<Game>;
-        private List<Event> _eventOnList = new List<Event>;
+        private List<Game> _gameOnList = new List<Game>();
+        private List<Event> _eventOnList = new List<Event>();
 
         public CalendarController()
         {
