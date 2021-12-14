@@ -28,5 +28,10 @@ namespace Calendrier
             CalendarView window = new CalendarView();
             window.ShowDialog();
         }
+
+        private void Home_Load(object sender, EventArgs e)
+        {
+           
+        }
     }
 }

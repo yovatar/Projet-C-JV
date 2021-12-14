@@ -74,6 +74,7 @@ namespace Calendrier
             this.Controls.Add(this.btnEvent);
             this.Name = "Home";
             this.Text = "Form1";
+            this.Load += new System.EventHandler(this.Home_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

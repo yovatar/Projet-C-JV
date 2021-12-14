@@ -6,20 +6,25 @@ using System.Threading.Tasks;
 
 namespace Calendrier
 {
-    public class Event
+    public class Event : Broadcast
     {
         private string _name;
         private DateTime _releasEventDate;
-        private List<Broadcast> _boradcast;
 
-        public Event(string name, DateTime releasEventDate)
+        public Event(string name, DateTime releasEventDate, string broadcastname) : base(broadcastname)
         {
             _name = name;
             _releasEventDate = releasEventDate;
         }
-        public void Addbroadcast(Broadcast broadcast) 
+
+        public string name
         {
-            _boradcast.Add(broadcast);
+            get { return _name; }
+        }
+
+        public DateTime releaseDate
+        {
+            get { return _releasEventDate; }
         }
     }
 }

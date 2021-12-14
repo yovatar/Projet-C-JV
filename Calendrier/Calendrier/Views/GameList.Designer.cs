@@ -146,6 +146,7 @@ namespace Calendrier
             this.Controls.Add(this.btnBack);
             this.Name = "GameList";
             this.Text = "Form1";
+            this.Load += new System.EventHandler(this.GameList_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

@@ -1,9 +1,12 @@
-[
-	{
-		"id": 1,
-		"name": "Twitch"
-	},{
-		"id": 2,
-		"name": "YouTube Live"
-	}
-]
+{
+	"data": [
+		{
+			"id": 1,
+			"name": "Twitch"
+		},
+		{
+			"id": 2,
+			"name": "YouTube Live"
+		}
+	]
+}

@@ -6,11 +6,11 @@ using System.Threading.Tasks;
 
 namespace Calendrier
 {
-    public class Broadcast : Event
+    public class Broadcast
     {
         private string _broadcastname;
 
-        public Broadcast(string broadcastname, string name, DateTime releasEventDate) : base(name, releasEventDate)
+        public Broadcast(string broadcastname)
         {
             _broadcastname = broadcastname;
         }

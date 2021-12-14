@@ -26,5 +26,10 @@ namespace Calendrier
         {
             this.Close();
         }
+
+        private void GameList_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
