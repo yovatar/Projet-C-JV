@@ -12,14 +12,23 @@ namespace Calendrier
 {
     public partial class Home : Form
     {
+        private CalendarController _controller;
+
         public Home()
         {
             InitializeComponent();
+            _controller = new CalendarController();
         }
 
         private void btnGame_Click(object sender, EventArgs e)
         {
             GameList window = new GameList();
+            var games = _controller.GetGames();
+
+            System.Diagnostics.Debug.WriteLine($"Les Games: {games}");
+
+            // window.Games = games;
+
             window.ShowDialog();
         }
 

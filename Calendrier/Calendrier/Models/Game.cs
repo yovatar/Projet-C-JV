@@ -10,13 +10,15 @@ namespace Calendrier
     {
         private string _name;
         private DateTime _releasGameDate;
-        private List<Editor> _editor;
+        private List<Editor> _editors;
         private List<Device> _devices;
 
         public Game(string name,DateTime releasGameDate)
         {
             _name = name;
             _releasGameDate = releasGameDate;
+            _devices = new List<Device>();
+            _editors = new List<Editor>();
         }
         public void AddDevice(Device device) 
         {
@@ -24,7 +26,7 @@ namespace Calendrier
         }
         public void AddEditor(Editor editor)
         {
-            _editor.Add(editor);
+            _editors.Add(editor);
         }
 
         public static List<Game> getAll()

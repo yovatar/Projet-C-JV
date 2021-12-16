@@ -10,12 +10,17 @@ namespace Calendrier
 {
     public class CalendarController
     {
+        private Device[] _devices;
+        private Editor[] _editors;
+
+
         private List<Game> _gameOnList = new List<Game>();
         private List<Event> _eventOnList = new List<Event>();
 
         public CalendarController()
         {
-
+            _devices = GetDevices();
+            _editors = GetEditors();
         }
 
         public void AddGame(Game game)
@@ -30,7 +35,7 @@ namespace Calendrier
             }
         }
 
-        public void addEvent(Event myEvent)
+        public void AddEvent(Event myEvent)
         {
             if (_eventOnList.Contains(myEvent))
             {
@@ -40,6 +45,40 @@ namespace Calendrier
             {
                 _eventOnList.Add(myEvent);
             }
+        }
+
+
+        public Device[] GetDevices()
+        {
+            var pathDevice = @"..\..\Datas\Devices.json";
+            string jsonFileDevice = File.ReadAllText(pathDevice);
+
+            dynamic fileDevice = JsonConvert.DeserializeObject(jsonFileDevice);
+            Device[] devices = new Device[10];
+
+            foreach (dynamic singleDevice in fileDevice)
+            {
+                Device newDevice = new Device(singleDevice.name.Value);
+                devices[singleDevice.id.Value] = newDevice;
+            }
+
+            return devices;
+        }
+        public Editor[] GetEditors()
+        {
+            var pathEditor = @"..\..\Datas\Editors.json";
+            string jsonFileEditor = File.ReadAllText(pathEditor);
+
+            dynamic fileEditor = JsonConvert.DeserializeObject(jsonFileEditor);
+            Editor[] editors = new Editor[100];
+
+            foreach (dynamic singleEditor in fileEditor)
+            {
+                Editor newEditor = new Editor(singleEditor.name.Value);
+                editors[singleEditor.id.Value] = newEditor;
+            }
+
+            return editors;
         }
 
         public List<Event> GetEvents()
@@ -66,6 +105,33 @@ namespace Calendrier
             }
 
             return events;
+        }
+
+        public List<Game> GetGames()
+        {
+            var pathGame = @"..\..\Datas\Games.json";
+            string jsonFileGame = File.ReadAllText(pathGame);
+
+            dynamic fileGame = JsonConvert.DeserializeObject(jsonFileGame);
+            List<Game> games = new List<Game>();
+
+            foreach (dynamic singleGame in fileGame)
+            {
+                Game newGame = new Game(singleGame.name.Value, Convert.ToDateTime(singleGame.releaseDate.Value));
+
+                foreach (dynamic deviceId in singleGame.devices)
+                {
+                    newGame.AddDevice(_devices[deviceId]);
+                }
+                
+                foreach (dynamic editorId in singleGame.editors)
+                {
+                    newGame.AddEditor(_editors[editorId]);
+                }
+                
+                games.Add(newGame);
+            }
+            return games;
         }
     }
 }
