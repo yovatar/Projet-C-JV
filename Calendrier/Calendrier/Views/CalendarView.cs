@@ -40,6 +40,7 @@ namespace Calendrier
             for (int i = 1; i <= days; i++) {
                 UserControlDays ucdays = new UserControlDays();
                 ucdays.days(i);
+                DayContainer.Controls.Add(ucdays);
             }
 
 
