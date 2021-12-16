@@ -67,6 +67,7 @@
             this.BtnNext.TabIndex = 2;
             this.BtnNext.Text = "Suivant";
             this.BtnNext.UseVisualStyleBackColor = true;
+            this.BtnNext.Click += new System.EventHandler(this.BtnNext_Click);
             // 
             // label1
             // 
