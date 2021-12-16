@@ -14,7 +14,10 @@ namespace Calendrier
 {
     public partial class CalendarView : Form
     {
+
         CalendarController controller;
+
+        int month, year;
 
         public CalendarView()
         {
@@ -27,9 +30,10 @@ namespace Calendrier
         }
         private void displayDays() {
             DateTime now = DateTime.Now;
-
-            DateTime startofthemounth = new DateTime(now.Year, now.Month, 1);
-            int days = DateTime.DaysInMonth(now.Year,now.Month);
+            month = now.Month;
+            year = now.Year;
+            DateTime startofthemounth = new DateTime(year, month, 1);
+            int days = DateTime.DaysInMonth(year, month);
             int daysoftheweek = Convert.ToInt32(startofthemounth.DayOfWeek.ToString("d")) + 2;
 
             for (int i=1; i < daysoftheweek; i++){
@@ -43,18 +47,33 @@ namespace Calendrier
                 DayContainer.Controls.Add(ucdays);
             }
 
-
-
-
-
-
-
-
         }
 
         private void btnReturn_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void BtnNext_Click(object sender, EventArgs e)
+        {
+            DayContainer.Controls.Clear();
+            month++;
+            DateTime startofthemounth = new DateTime(year, month, 1);
+            int days = DateTime.DaysInMonth(year, month);
+            int daysoftheweek = Convert.ToInt32(startofthemounth.DayOfWeek.ToString("d")) + 1;
+
+            for (int i = 1; i < daysoftheweek; i++)
+            {
+                UserControlBlank ucblank = new UserControlBlank();
+                DayContainer.Controls.Add(ucblank);
+
+            }
+            for (int i = 1; i <= days; i++)
+            {
+                UserControlDays ucdays = new UserControlDays();
+                ucdays.days(i);
+                DayContainer.Controls.Add(ucdays);
+            }
         }
     }
 }
