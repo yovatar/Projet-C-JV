@@ -29,103 +29,47 @@ namespace Calendrier
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(GameList));
             this.btnBack = new System.Windows.Forms.Button();
             this.lstGameList = new System.Windows.Forms.ListBox();
-            this.lblGameList = new System.Windows.Forms.Label();
-            this.lblName = new System.Windows.Forms.Label();
-            this.lblReleaseDate = new System.Windows.Forms.Label();
-            this.lblEditor = new System.Windows.Forms.Label();
-            this.lblDevices = new System.Windows.Forms.Label();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.SuspendLayout();
             // 
             // btnBack
             // 
+            this.btnBack.BackColor = System.Drawing.SystemColors.ButtonShadow;
+            this.btnBack.Font = new System.Drawing.Font("Arial Narrow", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnBack.Location = new System.Drawing.Point(12, 12);
             this.btnBack.Name = "btnBack";
-            this.btnBack.Size = new System.Drawing.Size(22, 29);
+            this.btnBack.Size = new System.Drawing.Size(184, 62);
             this.btnBack.TabIndex = 0;
-            this.btnBack.Text = "<";
-            this.btnBack.UseVisualStyleBackColor = true;
+            this.btnBack.Text = "Retour";
+            this.btnBack.UseVisualStyleBackColor = false;
             this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
             // 
             // lstGameList
             // 
+            this.lstGameList.BackColor = System.Drawing.SystemColors.InactiveCaption;
             this.lstGameList.FormattingEnabled = true;
-            this.lstGameList.Location = new System.Drawing.Point(12, 47);
+            this.lstGameList.Location = new System.Drawing.Point(424, 56);
             this.lstGameList.Name = "lstGameList";
             this.lstGameList.Size = new System.Drawing.Size(366, 589);
             this.lstGameList.TabIndex = 1;
             this.lstGameList.SelectedIndexChanged += new System.EventHandler(this.lstGameList_SelectedIndexChanged);
             // 
-            // lblGameList
-            // 
-            this.lblGameList.AutoSize = true;
-            this.lblGameList.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblGameList.Location = new System.Drawing.Point(527, 12);
-            this.lblGameList.Name = "lblGameList";
-            this.lblGameList.Size = new System.Drawing.Size(172, 37);
-            this.lblGameList.TabIndex = 3;
-            this.lblGameList.Text = "Game List";
-            this.lblGameList.Click += new System.EventHandler(this.label1_Click);
-            // 
-            // lblName
-            // 
-            this.lblName.AutoSize = true;
-            this.lblName.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblName.Location = new System.Drawing.Point(539, 111);
-            this.lblName.Name = "lblName";
-            this.lblName.Size = new System.Drawing.Size(78, 29);
-            this.lblName.TabIndex = 4;
-            this.lblName.Text = "Name";
-            // 
-            // lblReleaseDate
-            // 
-            this.lblReleaseDate.AutoSize = true;
-            this.lblReleaseDate.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblReleaseDate.Location = new System.Drawing.Point(539, 248);
-            this.lblReleaseDate.Name = "lblReleaseDate";
-            this.lblReleaseDate.Size = new System.Drawing.Size(159, 29);
-            this.lblReleaseDate.TabIndex = 5;
-            this.lblReleaseDate.Text = "Release Date";
-            // 
-            // lblEditor
-            // 
-            this.lblEditor.AutoSize = true;
-            this.lblEditor.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblEditor.Location = new System.Drawing.Point(540, 391);
-            this.lblEditor.Name = "lblEditor";
-            this.lblEditor.Size = new System.Drawing.Size(77, 29);
-            this.lblEditor.TabIndex = 6;
-            this.lblEditor.Text = "Editor";
-            // 
-            // lblDevices
-            // 
-            this.lblDevices.AutoSize = true;
-            this.lblDevices.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDevices.Location = new System.Drawing.Point(540, 552);
-            this.lblDevices.Name = "lblDevices";
-            this.lblDevices.Size = new System.Drawing.Size(99, 29);
-            this.lblDevices.TabIndex = 7;
-            this.lblDevices.Text = "Devices";
-            // 
             // GameList
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1175, 762);
-            this.Controls.Add(this.lblDevices);
-            this.Controls.Add(this.lblEditor);
-            this.Controls.Add(this.lblReleaseDate);
-            this.Controls.Add(this.lblName);
-            this.Controls.Add(this.lblGameList);
+            this.BackgroundImage = global::Calendrier.Properties.Resources._32;
+            this.ClientSize = new System.Drawing.Size(1266, 762);
             this.Controls.Add(this.lstGameList);
             this.Controls.Add(this.btnBack);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "GameList";
-            this.Text = "Form1";
+            this.Text = "Game Finder";
             this.Load += new System.EventHandler(this.GameList_Load);
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -133,11 +77,6 @@ namespace Calendrier
 
         private System.Windows.Forms.Button btnBack;
         private System.Windows.Forms.ListBox lstGameList;
-        private System.Windows.Forms.Label lblGameList;
-        private System.Windows.Forms.Label lblName;
-        private System.Windows.Forms.Label lblReleaseDate;
-        private System.Windows.Forms.Label lblEditor;
-        private System.Windows.Forms.Label lblDevices;
         private System.ComponentModel.BackgroundWorker backgroundWorker1;
     }
 }

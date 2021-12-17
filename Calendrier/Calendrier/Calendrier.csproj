@@ -128,5 +128,20 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\32.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Img\32.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Img\Finder-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Img\60793.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Img\fleche 2.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
