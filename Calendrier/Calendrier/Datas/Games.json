@@ -52,7 +52,7 @@
 	},
 	{
 		"id": 8,
-		"name": "Project Zero : La Prêtresse des Eaux Noires",
+		"name": "Project Zero : La Pretresse des Eaux Noires",
 		"releaseDate": "2021-04-14",
 		"devices": [ 6 ],
 		"editors": [ 9 ]
@@ -87,7 +87,7 @@
 	},
 	{
 		"id": 13,
-		"name": "Pokémon Legends Arceus",
+		"name": "Pokemon Legends Arceus",
 		"releaseDate": "2021-01-28",
 		"devices": [ 6 ],
 		"editors": [ 9 ]
@@ -164,7 +164,7 @@
 	},
 	{
 		"id": 24,
-		"name": "Kirby : Et le monde oublié",
+		"name": "Kirby : Et le monde oublie",
 		"releaseDate": "2022-10-04",
 		"devices": [ 6 ],
 		"editors": [ 9 ]

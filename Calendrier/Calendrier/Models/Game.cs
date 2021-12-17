@@ -29,6 +29,24 @@ namespace Calendrier
             _editors.Add(editor);
         }
 
+        public string Name
+        {
+            get { return _name; }
+        }
+        public DateTime ReleasGame
+        {
+            get { return _releasGameDate; }
+        }
+        public List<Editor> Editor
+        {
+        get { return _editors; }
+        }
+
+        public List<Device> Device
+        {
+            get { return _devices; }
+        }
+
         public static List<Game> getAll()
         {
             List<Game> games = new List<Game>();

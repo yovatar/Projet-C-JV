@@ -36,9 +36,7 @@ namespace Calendrier
             this.lblReleaseDate = new System.Windows.Forms.Label();
             this.lblEditor = new System.Windows.Forms.Label();
             this.lblDevices = new System.Windows.Forms.Label();
-            this.btnUp = new System.Windows.Forms.Button();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
-            this.btnDown = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btnBack
@@ -56,8 +54,9 @@ namespace Calendrier
             this.lstGameList.FormattingEnabled = true;
             this.lstGameList.Location = new System.Drawing.Point(12, 47);
             this.lstGameList.Name = "lstGameList";
-            this.lstGameList.Size = new System.Drawing.Size(323, 589);
+            this.lstGameList.Size = new System.Drawing.Size(366, 589);
             this.lstGameList.TabIndex = 1;
+            this.lstGameList.SelectedIndexChanged += new System.EventHandler(this.lstGameList_SelectedIndexChanged);
             // 
             // lblGameList
             // 
@@ -110,33 +109,11 @@ namespace Calendrier
             this.lblDevices.TabIndex = 7;
             this.lblDevices.Text = "Devices";
             // 
-            // btnUp
-            // 
-            this.btnUp.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnUp.Location = new System.Drawing.Point(341, 47);
-            this.btnUp.Name = "btnUp";
-            this.btnUp.Size = new System.Drawing.Size(42, 50);
-            this.btnUp.TabIndex = 8;
-            this.btnUp.Text = "⬆";
-            this.btnUp.UseVisualStyleBackColor = true;
-            // 
-            // btnDown
-            // 
-            this.btnDown.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDown.Location = new System.Drawing.Point(341, 586);
-            this.btnDown.Name = "btnDown";
-            this.btnDown.Size = new System.Drawing.Size(42, 50);
-            this.btnDown.TabIndex = 9;
-            this.btnDown.Text = "⬇";
-            this.btnDown.UseVisualStyleBackColor = true;
-            // 
             // GameList
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1175, 762);
-            this.Controls.Add(this.btnDown);
-            this.Controls.Add(this.btnUp);
             this.Controls.Add(this.lblDevices);
             this.Controls.Add(this.lblEditor);
             this.Controls.Add(this.lblReleaseDate);
@@ -161,8 +138,6 @@ namespace Calendrier
         private System.Windows.Forms.Label lblReleaseDate;
         private System.Windows.Forms.Label lblEditor;
         private System.Windows.Forms.Label lblDevices;
-        private System.Windows.Forms.Button btnUp;
         private System.ComponentModel.BackgroundWorker backgroundWorker1;
-        private System.Windows.Forms.Button btnDown;
     }
 }

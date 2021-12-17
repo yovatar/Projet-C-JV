@@ -29,6 +29,23 @@ namespace Calendrier
 
         private void GameList_Load(object sender, EventArgs e)
         {
+            CalendarController Controller = new CalendarController();
+            List<Game> games = Controller.GetGames();
+            foreach(Game game in games)
+            {
+                lstGameList.Items.Add(game.Name);
+                lstGameList.Items.Add(game.ReleasGame);
+                lstGameList.Items.Add(game.Device);
+                lstGameList.Items.Add(game.Editor);
+                lstGameList.Items.Add("\n");
+
+            }
+
+
+        }
+
+        private void lstGameList_SelectedIndexChanged(object sender, EventArgs e)
+        {
 
         }
     }
