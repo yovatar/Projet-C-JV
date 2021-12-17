@@ -39,6 +39,7 @@
             this.label6 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.btnReturn = new System.Windows.Forms.Button();
+            this.LBDate = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // DayContainer
@@ -57,6 +58,7 @@
             this.BtnBack.TabIndex = 1;
             this.BtnBack.Text = "Précédent";
             this.BtnBack.UseVisualStyleBackColor = true;
+            this.BtnBack.Click += new System.EventHandler(this.BtnBack_Click);
             // 
             // BtnNext
             // 
@@ -149,11 +151,22 @@
             this.btnReturn.UseVisualStyleBackColor = true;
             this.btnReturn.Click += new System.EventHandler(this.btnReturn_Click);
             // 
+            // LBDate
+            // 
+            this.LBDate.AutoSize = true;
+            this.LBDate.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LBDate.Location = new System.Drawing.Point(521, 9);
+            this.LBDate.Name = "LBDate";
+            this.LBDate.Size = new System.Drawing.Size(124, 25);
+            this.LBDate.TabIndex = 11;
+            this.LBDate.Text = "Mois année";
+            // 
             // CalendarView
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1175, 762);
+            this.Controls.Add(this.LBDate);
             this.Controls.Add(this.btnReturn);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.label5);
@@ -186,6 +199,7 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Button btnReturn;
+        private System.Windows.Forms.Label LBDate;
     }
 }
 

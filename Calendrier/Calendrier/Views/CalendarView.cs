@@ -4,18 +4,18 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Globalization;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using Calendrier;
 
 namespace Calendrier
 {
     public partial class CalendarView : Form
     {
 
-        CalendarController controller;
+       
 
         int month, year;
 
@@ -32,6 +32,10 @@ namespace Calendrier
             DateTime now = DateTime.Now;
             month = now.Month;
             year = now.Year;
+
+            String monthname = DateTimeFormatInfo.CurrentInfo.GetMonthName(month);
+            LBDate.Text = monthname + " " + year;
+            
             DateTime startofthemounth = new DateTime(year, month, 1);
             int days = DateTime.DaysInMonth(year, month);
             int daysoftheweek = Convert.ToInt32(startofthemounth.DayOfWeek.ToString("d")) + 2;
@@ -54,10 +58,36 @@ namespace Calendrier
             this.Close();
         }
 
+        private void BtnBack_Click(object sender, EventArgs e)
+        {
+            DayContainer.Controls.Clear();
+            month--;
+            String monthname = DateTimeFormatInfo.CurrentInfo.GetMonthName(month);
+            LBDate.Text = monthname + " " + year;
+            DateTime startofthemounth = new DateTime(year, month, 1);
+            int days = DateTime.DaysInMonth(year, month);
+            int daysoftheweek = Convert.ToInt32(startofthemounth.DayOfWeek.ToString("d")) + 1;
+
+            for (int i = 1; i < daysoftheweek; i++)
+            {
+                UserControlBlank ucblank = new UserControlBlank();
+                DayContainer.Controls.Add(ucblank);
+
+            }
+            for (int i = 1; i <= days; i++)
+            {
+                UserControlDays ucdays = new UserControlDays();
+                ucdays.days(i);
+                DayContainer.Controls.Add(ucdays);
+            }
+        }
+
         private void BtnNext_Click(object sender, EventArgs e)
         {
             DayContainer.Controls.Clear();
             month++;
+            String monthname = DateTimeFormatInfo.CurrentInfo.GetMonthName(month);
+            LBDate.Text = monthname + " " + year;
             DateTime startofthemounth = new DateTime(year, month, 1);
             int days = DateTime.DaysInMonth(year, month);
             int daysoftheweek = Convert.ToInt32(startofthemounth.DayOfWeek.ToString("d")) + 1;
