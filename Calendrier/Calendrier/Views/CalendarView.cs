@@ -38,7 +38,7 @@ namespace Calendrier
             
             DateTime startofthemounth = new DateTime(year, month, 1);
             int days = DateTime.DaysInMonth(year, month);
-            int daysoftheweek = Convert.ToInt32(startofthemounth.DayOfWeek.ToString("d")) + 2;
+            int daysoftheweek = Convert.ToInt32(startofthemounth.DayOfWeek.ToString("d"));
 
             for (int i=1; i < daysoftheweek; i++){
                 UserControlBlank ucblank = new UserControlBlank();
@@ -61,12 +61,20 @@ namespace Calendrier
         private void BtnBack_Click(object sender, EventArgs e)
         {
             DayContainer.Controls.Clear();
-            month--;
+            if (month == 1)
+            {
+                month = 12;
+                year--;
+            }
+            else
+            {
+                month--;
+            }
             String monthname = DateTimeFormatInfo.CurrentInfo.GetMonthName(month);
             LBDate.Text = monthname + " " + year;
             DateTime startofthemounth = new DateTime(year, month, 1);
             int days = DateTime.DaysInMonth(year, month);
-            int daysoftheweek = Convert.ToInt32(startofthemounth.DayOfWeek.ToString("d")) + 1;
+            int daysoftheweek = Convert.ToInt32(startofthemounth.DayOfWeek.ToString("d"));
 
             for (int i = 1; i < daysoftheweek; i++)
             {
@@ -85,12 +93,20 @@ namespace Calendrier
         private void BtnNext_Click(object sender, EventArgs e)
         {
             DayContainer.Controls.Clear();
-            month++;
+            if (month == 12)
+            {
+                month = 1;
+                year++;
+            }
+            else
+            {
+                month++;
+            }
             String monthname = DateTimeFormatInfo.CurrentInfo.GetMonthName(month);
             LBDate.Text = monthname + " " + year;
             DateTime startofthemounth = new DateTime(year, month, 1);
             int days = DateTime.DaysInMonth(year, month);
-            int daysoftheweek = Convert.ToInt32(startofthemounth.DayOfWeek.ToString("d")) + 1;
+            int daysoftheweek = Convert.ToInt32(startofthemounth.DayOfWeek.ToString("d"));
 
             for (int i = 1; i < daysoftheweek; i++)
             {
