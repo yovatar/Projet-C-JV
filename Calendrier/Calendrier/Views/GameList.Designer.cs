@@ -50,10 +50,12 @@ namespace Calendrier
             // lstGameList
             // 
             this.lstGameList.BackColor = System.Drawing.SystemColors.InactiveCaption;
+            this.lstGameList.Font = new System.Drawing.Font("Arial", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lstGameList.FormattingEnabled = true;
-            this.lstGameList.Location = new System.Drawing.Point(424, 56);
+            this.lstGameList.ItemHeight = 32;
+            this.lstGameList.Location = new System.Drawing.Point(161, 146);
             this.lstGameList.Name = "lstGameList";
-            this.lstGameList.Size = new System.Drawing.Size(366, 589);
+            this.lstGameList.Size = new System.Drawing.Size(613, 580);
             this.lstGameList.TabIndex = 1;
             this.lstGameList.SelectedIndexChanged += new System.EventHandler(this.lstGameList_SelectedIndexChanged);
             // 
@@ -62,14 +64,14 @@ namespace Calendrier
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::Calendrier.Properties.Resources._32;
-            this.ClientSize = new System.Drawing.Size(1266, 762);
+            this.ClientSize = new System.Drawing.Size(1047, 874);
             this.Controls.Add(this.lstGameList);
             this.Controls.Add(this.btnBack);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "GameList";
             this.Text = "Game Finder";
             this.Load += new System.EventHandler(this.GameList_Load);
-            this.ResizeEnd += new System.EventHandler(this.GameList_ResizeEnd);
+            this.Resize += new System.EventHandler(this.GameList_Resize);
             this.ResumeLayout(false);
 
         }

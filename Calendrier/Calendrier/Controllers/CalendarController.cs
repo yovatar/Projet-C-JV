@@ -80,6 +80,22 @@ namespace Calendrier
 
             return editors;
         }
+        public Editor[] GetBroadcast()
+        {
+            var pathBroadcast = @"..\..\Datas\Broadcast.json";
+            string jsonFileBroadcast = File.ReadAllText(pathBroadcast);
+
+            dynamic fileBroadcast = JsonConvert.DeserializeObject(jsonFileBroadcast);
+            Editor[] broadcast = new Broadcast[100];
+
+            foreach (dynamic singleEditor in fileEditor)
+            {
+                Editor newEditor = new Editor(singleEditor.name.Value);
+                editors[singleEditor.id.Value] = newEditor;
+            }
+
+            return editors;
+        }
 
         public List<Event> GetEvents()
         {
