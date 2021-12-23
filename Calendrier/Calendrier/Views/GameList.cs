@@ -60,5 +60,11 @@ namespace Calendrier
         {
 
         }
+
+        private void GameList_ResizeEnd(object sender, EventArgs e)
+        {
+            lstGameList.Left = Width / 3;
+            
+        }
     }
 }

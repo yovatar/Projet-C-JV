@@ -69,6 +69,7 @@ namespace Calendrier
             this.Name = "GameList";
             this.Text = "Game Finder";
             this.Load += new System.EventHandler(this.GameList_Load);
+            this.ResizeEnd += new System.EventHandler(this.GameList_ResizeEnd);
             this.ResumeLayout(false);
 
         }
