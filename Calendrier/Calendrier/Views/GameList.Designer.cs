@@ -51,7 +51,7 @@ namespace Calendrier
             // 
             this.lstGameList.BackColor = System.Drawing.SystemColors.InactiveCaption;
             this.lstGameList.FormattingEnabled = true;
-            this.lstGameList.Location = new System.Drawing.Point(424, 56);
+            this.lstGameList.Location = new System.Drawing.Point(539, 78);
             this.lstGameList.Name = "lstGameList";
             this.lstGameList.Size = new System.Drawing.Size(366, 589);
             this.lstGameList.TabIndex = 1;
@@ -62,12 +62,13 @@ namespace Calendrier
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::Calendrier.Properties.Resources._32;
-            this.ClientSize = new System.Drawing.Size(1266, 762);
+            this.ClientSize = new System.Drawing.Size(1437, 798);
             this.Controls.Add(this.lstGameList);
             this.Controls.Add(this.btnBack);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "GameList";
-            this.Text = "Game Finder";
+            this.Text = "Game Finder List";
             this.Load += new System.EventHandler(this.GameList_Load);
             this.ResizeEnd += new System.EventHandler(this.GameList_ResizeEnd);
             this.ResumeLayout(false);

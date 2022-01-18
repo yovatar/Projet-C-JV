@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CalendarView));
             this.DayContainer = new System.Windows.Forms.FlowLayoutPanel();
             this.BtnBack = new System.Windows.Forms.Button();
             this.BtnNext = new System.Windows.Forms.Button();
@@ -44,6 +45,7 @@
             // 
             // DayContainer
             // 
+            this.DayContainer.BackColor = System.Drawing.Color.Transparent;
             this.DayContainer.Location = new System.Drawing.Point(41, 86);
             this.DayContainer.Name = "DayContainer";
             this.DayContainer.Size = new System.Drawing.Size(1079, 568);
@@ -178,8 +180,10 @@
             this.Controls.Add(this.BtnNext);
             this.Controls.Add(this.BtnBack);
             this.Controls.Add(this.DayContainer);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "CalendarView";
-            this.Text = "Form1";
+            this.Text = "Game Finder Calendar";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
