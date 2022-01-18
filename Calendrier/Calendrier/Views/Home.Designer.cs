@@ -53,7 +53,7 @@ namespace Calendrier
             this.btnGame.Name = "btnGame";
             this.btnGame.Size = new System.Drawing.Size(213, 85);
             this.btnGame.TabIndex = 1;
-            this.btnGame.Text = "List";
+            this.btnGame.Text = "Liste";
             this.btnGame.UseVisualStyleBackColor = false;
             this.btnGame.Click += new System.EventHandler(this.btnGame_Click);
             // 
