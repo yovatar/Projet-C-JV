@@ -80,46 +80,43 @@ namespace Calendrier
 
             return editors;
         }
-        public Editor[] GetBroadcast()
+        public Broadcast[] GetBroadcast()
         {
             var pathBroadcast = @"..\..\Datas\Broadcast.json";
             string jsonFileBroadcast = File.ReadAllText(pathBroadcast);
 
             dynamic fileBroadcast = JsonConvert.DeserializeObject(jsonFileBroadcast);
-            Editor[] broadcast = new Broadcast[100];
+            Broadcast[] broadcast = new Broadcast[100];
 
-            foreach (dynamic singleEditor in fileEditor)
+            foreach (dynamic singleBroadcast in fileBroadcast)
             {
-                Editor newEditor = new Editor(singleEditor.name.Value);
-                editors[singleEditor.id.Value] = newEditor;
+                Broadcast newBroadcast = new Broadcast(singleBroadcast.name.Value);
+                broadcast[singleBroadcast.id.Value] = newBroadcast;
             }
 
-            return editors;
+            return broadcast;
         }
 
-        public List<Event> GetEvents()
+        public List<Event> GetEvent()
         {
-            var pathBroadcast = @"..\..\Datas\Broadcast.json";
-            string jsonFileBroadcast = File.ReadAllText(pathBroadcast);
-            var pathEvent = @"..\..\Datas\Events.json";
+            var pathEvent = @"..\..\Datas\Event.json";
             string jsonFileEvent = File.ReadAllText(pathEvent);
 
-            dynamic fileBroadcast = JsonConvert.DeserializeObject(jsonFileBroadcast);
             dynamic fileEvent = JsonConvert.DeserializeObject(jsonFileEvent);
             List<Event> events = new List<Event>();
 
-            foreach (dynamic singleEvent in fileEvent.data)
+            foreach (dynamic singleEvent in fileEvent)
             {
-                var broadcastName = "default";
-                foreach (dynamic singleBroadcastName in fileBroadcast.data)
+                Event newEvent = new Event(singleEvent.name.Value, Convert.ToDateTime(singleEvent.releaseDate.Value));
+
+                foreach (dynamic broadcastId in singleEvent.broadcast)
                 {
-                    broadcastName = singleBroadcastName.name.Value;
+                    newEvent.AddDevice(_devices[broadcastId]);
                 }
 
-                Event newEvent = new Event(singleEvent.name.Value, Convert.ToDateTime(singleEvent.releasdate.Value), broadcastName);
+
                 events.Add(newEvent);
             }
-
             return events;
         }
 
