@@ -29,7 +29,7 @@ namespace Calendrier
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Home));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmHome));
             this.btnEvent = new System.Windows.Forms.Button();
             this.btnGame = new System.Windows.Forms.Button();
             this.lblGameFinder = new System.Windows.Forms.Label();
