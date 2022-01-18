@@ -78,13 +78,13 @@ namespace Calendrier
             this.Controls.Add(this.lblGameFinder);
             this.Controls.Add(this.btnGame);
             this.Controls.Add(this.btnEvent);
-<<<<<<< HEAD
+
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Home";
-=======
+
             this.Name = "frmHome";
->>>>>>> 5156de79929d1eef09165977f63e3974311a8829
+
             this.Text = "Game Finder";
             this.Load += new System.EventHandler(this.Home_Load);
             this.Resize += new System.EventHandler(this.Home_Resize);
