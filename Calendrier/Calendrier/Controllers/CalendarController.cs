@@ -12,6 +12,7 @@ namespace Calendrier
     {
         private Device[] _devices;
         private Editor[] _editors;
+        private Broadcast[] _broadcast;
 
 
         private List<Game> _gameOnList = new List<Game>();
@@ -21,6 +22,7 @@ namespace Calendrier
         {
             _devices = GetDevices();
             _editors = GetEditors();
+            _broadcast = GetBroadcast();
         }
 
         public void AddGame(Game game)
@@ -97,28 +99,28 @@ namespace Calendrier
             return broadcast;
         }
 
-     //  public List<Event> GetEvent()
-     //  {
-     //      var pathEvent = @"..\..\Datas\Event.json";
-     //      string jsonFileEvent = File.ReadAllText(pathEvent);
-     //
-     //      dynamic fileEvent = JsonConvert.DeserializeObject(jsonFileEvent);
-     //      List<Event> events = new List<Event>();
-     //
-     //      foreach (dynamic singleEvent in fileEvent)
-     //      {
-     //          Event newEvent = new Event(singleEvent.name.V+alue, Convert.ToDateTime(singleEvent.releaseDate.Value));
-     //
-     //          foreach (dynamic broadcastId in singleEvent.broadcast)
-     //          {
-     //              newEvent.AddDevice(_devices[broadcastId]);
-     //          }
-     //
-     //
-     //          events.Add(newEvent);
-     //      }
-     //      return events;
-     //  }
+        public List<Event> GetEvent()
+        {
+            var pathEvent = @"..\..\Datas\Event.json";
+            string jsonFileEvent = File.ReadAllText(pathEvent);
+   
+            dynamic fileEvent = JsonConvert.DeserializeObject(jsonFileEvent);
+            List<Event> events = new List<Event>();
+   
+            foreach (dynamic singleEvent in fileEvent)
+            {
+                Event newEvent = new Event(singleEvent.name.Value, Convert.ToDateTime(singleEvent.releaseDate.Value));
+   
+                foreach (dynamic broadcastId in singleEvent.broadcast)
+                {
+                    newEvent.AddBroadcast(_broadcast[broadcastId]);
+                }
+   
+   
+                events.Add(newEvent);
+            }
+            return events;
+        }
 
         public List<Game> GetGames()
         {

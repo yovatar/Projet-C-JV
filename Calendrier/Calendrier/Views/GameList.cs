@@ -47,7 +47,13 @@ namespace Calendrier
                 string devices = "";
                 foreach (Device device in game.Device)
                 {
-                    devices += device.DeviceName + ", ";
+                    devices += device.DeviceName;
+
+                    // Si ce n'est pas le dernier, ajoute une virgule et un espace
+                    if (!device.Equals(game.Device.Last()))
+                    {
+                        devices += ", ";
+                    }
                 }
                 lstGameList.Items.Add(devices);
 
