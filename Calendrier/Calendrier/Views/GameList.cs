@@ -36,18 +36,26 @@ namespace Calendrier
             {
                 lstGameList.Items.Add(game.Name);
                 lstGameList.Items.Add(game.ReleasGame);
-                foreach(Editor editor in game.Editor)
+
+                string editors = "";
+                foreach (Editor editor in game.Editor)
                 {
-                    lstGameList.Items.Add(editor.EditorName);
+                    editors += editor.EditorName + " ";
                 }
+                lstGameList.Items.Add(editors);
+
+                string devices = "";
                 foreach (Device device in game.Device)
                 {
-                    lstGameList.Items.Add(device.DeviceName);
+                    devices += device.DeviceName + ", ";
                 }
-                lstGameList.Items.Add("\n");
+                lstGameList.Items.Add(devices);
 
+                lstGameList.Items.Add("");
             }
 
+            lstGameList.Left = Width / 2 - lstGameList.Width/2;
+            lstGameList.Top = Height / 2 - lstGameList.Height/2;
 
         }
 
@@ -61,10 +69,10 @@ namespace Calendrier
 
         }
 
-        private void GameList_ResizeEnd(object sender, EventArgs e)
+        private void GameList_Resize(object sender, EventArgs e)
         {
-            lstGameList.Left = Width / 3;
-            
+            lstGameList.Left = Width / 2 - lstGameList.Width / 2;
+            lstGameList.Top = Height / 2 - lstGameList.Height / 2;
         }
     }
 }

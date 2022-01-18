@@ -10,11 +10,11 @@ using System.Windows.Forms;
 
 namespace Calendrier
 {
-    public partial class Home : Form
+    public partial class frmHome : Form
     {
         private CalendarController _controller;
 
-        public Home()
+        public frmHome()
         {
             InitializeComponent();
             _controller = new CalendarController();
@@ -41,6 +41,11 @@ namespace Calendrier
         private void Home_Load(object sender, EventArgs e)
         {
            
+        }
+
+        private void Home_Resize(object sender, EventArgs e)
+        {
+
         }
     }
 }

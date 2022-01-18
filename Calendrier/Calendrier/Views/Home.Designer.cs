@@ -1,7 +1,7 @@
 ﻿
 namespace Calendrier
 {
-    partial class Home
+    partial class frmHome
     {
         /// <summary>
         /// Required designer variable.
@@ -69,7 +69,7 @@ namespace Calendrier
             this.lblGameFinder.TabIndex = 2;
             this.lblGameFinder.Text = "Game Finder";
             // 
-            // Home
+            // frmHome
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -78,11 +78,16 @@ namespace Calendrier
             this.Controls.Add(this.lblGameFinder);
             this.Controls.Add(this.btnGame);
             this.Controls.Add(this.btnEvent);
+<<<<<<< HEAD
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Home";
+=======
+            this.Name = "frmHome";
+>>>>>>> 5156de79929d1eef09165977f63e3974311a8829
             this.Text = "Game Finder";
             this.Load += new System.EventHandler(this.Home_Load);
+            this.Resize += new System.EventHandler(this.Home_Resize);
             this.ResumeLayout(false);
             this.PerformLayout();
 
