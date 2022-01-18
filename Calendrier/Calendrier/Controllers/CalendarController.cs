@@ -82,45 +82,45 @@ namespace Calendrier
 
             return editors;
         }
-        public Broadcast[] GetBroadcast()
-        {
-            var pathBroadcast = @"..\..\Datas\Broadcast.json";
-            string jsonFileBroadcast = File.ReadAllText(pathBroadcast);
-
-            dynamic fileBroadcast = JsonConvert.DeserializeObject(jsonFileBroadcast);
-            Broadcast[] broadcast = new Broadcast[100];
-
-            foreach (dynamic singleBroadcast in fileBroadcast)
-            {
-                Broadcast newBroadcast = new Broadcast(singleBroadcast.name.Value);
-                broadcast[singleBroadcast.id.Value] = newBroadcast;
-            }
-
-            return broadcast;
-        }
-
-        public List<Event> GetEvent()
-        {
-            var pathEvent = @"..\..\Datas\Event.json";
-            string jsonFileEvent = File.ReadAllText(pathEvent);
-   
-            dynamic fileEvent = JsonConvert.DeserializeObject(jsonFileEvent);
-            List<Event> events = new List<Event>();
-   
-            foreach (dynamic singleEvent in fileEvent)
-            {
-                Event newEvent = new Event(singleEvent.name.Value, Convert.ToDateTime(singleEvent.releaseDate.Value));
-   
-                foreach (dynamic broadcastId in singleEvent.broadcast)
-                {
-                    newEvent.AddBroadcast(_broadcast[broadcastId]);
-                }
-   
-   
-                events.Add(newEvent);
-            }
-            return events;
-        }
+           public Broadcast[] GetBroadcast()
+           {
+               var pathBroadcast = @"..\..\Datas\Broadcast.json";
+               string jsonFileBroadcast = File.ReadAllText(pathBroadcast);
+        
+               dynamic fileBroadcast = JsonConvert.DeserializeObject(jsonFileBroadcast);
+               Broadcast[] broadcast = new Broadcast[100];
+        
+               foreach (dynamic singleBroadcast in fileBroadcast)
+               {
+                   Broadcast newBroadcast = new Broadcast(singleBroadcast.name.Value);
+                   broadcast[singleBroadcast.id.Value] = newBroadcast;
+               }
+        
+               return broadcast;
+          }
+        
+          public List<Event> GetEvent()
+          {
+              var pathEvent = @"..\..\Datas\Event.json";
+              string jsonFileEvent = File.ReadAllText(pathEvent);
+        
+              dynamic fileEvent = JsonConvert.DeserializeObject(jsonFileEvent);
+              List<Event> events = new List<Event>();
+        
+              foreach (dynamic singleEvent in fileEvent)
+              {
+                  Event newEvent = new Event(singleEvent.name.Value, Convert.ToDateTime(singleEvent.releaseDate.Value));
+        
+                  foreach (dynamic broadcastId in singleEvent.broadcast)
+                  {
+                      newEvent.AddBroadcast(_broadcast[broadcastId]);
+                  }
+        
+        
+                  events.Add(newEvent);
+              }
+              return events;
+          }
 
         public List<Game> GetGames()
         {

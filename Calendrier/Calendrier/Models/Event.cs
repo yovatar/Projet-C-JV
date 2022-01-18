@@ -33,5 +33,9 @@ namespace Calendrier
         {
             _broadcasts.Add(broadcast);
         }
+        public List<Broadcast> Broadcast
+        {
+            get { return _broadcasts; }
+        }
     }
 }
