@@ -21,6 +21,7 @@ namespace Calendrier
 
         }
         public void days(int numday) {
+            //affiche le jour dans la case
             lbdays.Text = numday+"";
         }
 

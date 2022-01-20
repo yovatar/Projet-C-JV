@@ -24,6 +24,7 @@ namespace Calendrier
 
         private void btnBack_Click(object sender, EventArgs e)
         {
+            //ferme la fenetre pour revenir à l'acceuil
             this.Close();
         }
 
@@ -36,14 +37,14 @@ namespace Calendrier
             {
                 lstGameList.Items.Add(game.Name);
                 lstGameList.Items.Add(game.ReleasGame);
-
+                //ajoute l'éditeur
                 string editors = "";
                 foreach (Editor editor in game.Editor)
                 {
                     editors += editor.EditorName + " ";
                 }
                 lstGameList.Items.Add(editors);
-
+                //ajoute les plateformes
                 string devices = "";
                 foreach (Device device in game.Device)
                 {
@@ -59,7 +60,7 @@ namespace Calendrier
 
                 lstGameList.Items.Add("");
             }
-
+            
             lstGameList.Left = Width / 2 - lstGameList.Width/2;
             lstGameList.Top = Height / 2 - lstGameList.Height/2;
 

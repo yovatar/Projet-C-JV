@@ -22,6 +22,7 @@ namespace Calendrier
 
         private void btnGame_Click(object sender, EventArgs e)
         {
+            // ouvre la liste des jeux 
             GameList window = new GameList();
             var games = _controller.GetGames();
 
@@ -34,6 +35,7 @@ namespace Calendrier
 
         private void btnEvent_Click(object sender, EventArgs e)
         {
+            //affiche les events
             CalendarView window = new CalendarView();
             window.ShowDialog();
         }
@@ -45,7 +47,7 @@ namespace Calendrier
 
         private void Home_Resize(object sender, EventArgs e)
         {
-
+            //empeche le redimensionnement 
         }
     }
 }

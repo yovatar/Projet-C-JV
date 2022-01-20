@@ -55,6 +55,7 @@ namespace Calendrier
 
         private void btnReturn_Click(object sender, EventArgs e)
         {
+            //ferme la fenetre pour revenir à l'acceuil
             this.Close();
         }
 

@@ -180,7 +180,7 @@
             this.Controls.Add(this.BtnNext);
             this.Controls.Add(this.BtnBack);
             this.Controls.Add(this.DayContainer);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "CalendarView";
             this.Text = "Game Finder Calendar";
