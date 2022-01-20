@@ -58,6 +58,7 @@ namespace Calendrier
             this.Close();
         }
 
+        //va permettre de passer au mois précédant
         private void BtnBack_Click(object sender, EventArgs e)
         {
             DayContainer.Controls.Clear();
@@ -90,6 +91,7 @@ namespace Calendrier
             }
         }
 
+        //va permetre de passer au mois suivant 
         private void BtnNext_Click(object sender, EventArgs e)
         {
             DayContainer.Controls.Clear();

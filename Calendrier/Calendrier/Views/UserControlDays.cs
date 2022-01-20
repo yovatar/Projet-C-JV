@@ -23,5 +23,10 @@ namespace Calendrier
         public void days(int numday) {
             lbdays.Text = numday+"";
         }
+
+        private void EventLbl_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

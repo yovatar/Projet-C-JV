@@ -65,15 +65,6 @@ namespace Calendrier
 
         }
 
-        private void lstGameList_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void lblDevices_Click(object sender, EventArgs e)
-        {
-
-        }
 
         private void GameList_Resize(object sender, EventArgs e)
         {

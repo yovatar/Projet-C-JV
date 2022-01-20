@@ -61,7 +61,7 @@ namespace Calendrier
             this.lstGameList.Name = "lstGameList";
             this.lstGameList.Size = new System.Drawing.Size(613, 580);
             this.lstGameList.TabIndex = 1;
-            this.lstGameList.SelectedIndexChanged += new System.EventHandler(this.lstGameList_SelectedIndexChanged);
+       
             // 
             // GameList
             // 

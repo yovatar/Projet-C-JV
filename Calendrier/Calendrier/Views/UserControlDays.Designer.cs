@@ -30,6 +30,7 @@ namespace Calendrier
         private void InitializeComponent()
         {
             this.lbdays = new System.Windows.Forms.Label();
+            this.EventLbl = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // lbdays
@@ -42,11 +43,23 @@ namespace Calendrier
             this.lbdays.TabIndex = 0;
             this.lbdays.Text = "00";
             // 
+            // EventLbl
+            // 
+            this.EventLbl.AutoSize = true;
+            this.EventLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.EventLbl.Location = new System.Drawing.Point(49, 40);
+            this.EventLbl.Name = "EventLbl";
+            this.EventLbl.Size = new System.Drawing.Size(50, 20);
+            this.EventLbl.TabIndex = 1;
+            this.EventLbl.Text = "Event";
+            this.EventLbl.Click += new System.EventHandler(this.EventLbl_Click);
+            // 
             // UserControlDays
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
+            this.Controls.Add(this.EventLbl);
             this.Controls.Add(this.lbdays);
             this.Name = "UserControlDays";
             this.Size = new System.Drawing.Size(148, 87);
@@ -59,5 +72,6 @@ namespace Calendrier
         #endregion
 
         private System.Windows.Forms.Label lbdays;
+        private System.Windows.Forms.Label EventLbl;
     }
 }
